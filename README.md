@@ -1,37 +1,27 @@
-# Swatch
+# Core
 
-Takes an obj containing a title and an array of RGB values and produces
+## Introduction
 
-1. an Adobe swatch file formatted buffer, or
-2. an array of swatch RGB values
+Core methods shared throughout my code encapsulated in one module.
 
-## Examples
+## Methods
 
-where *size* is *12*, the size of the palette
-and *obj* is
-
-```javascript
-{
-  title: 'Example',
-  data: [[100,200,100],[30,12,19]]...[255,100,0]]
-}
-```
-
-### A binary buffer in Adobe ASE format.
-
-```javascript
-swatch(obj, size, function(buffer) {
-  fs.writeFile(obj.title + '.ase', buffer)
-})
-```
-
-### An array of swatch RGB values
-
-```javascript
-swatch.justData(obj, size, function(array) {
-  console.log(array);
-})
-```
+* escapeHTML
+* merge (objects)
+* getUUID
+* toType
+* getNumberInRange
+* fromPrototype
+* clear (console)
+* isObject
+* getModuleName
+* pad (string)
+* percent
+* timeFn
+* asFormattedArray
+* getProps
+* getExtProps
+* Array.prototype.dedupe
 
 ## License
 swatch.js &copy; 2012 Andy Willis  

@@ -4,7 +4,7 @@ var core = module.exports = {};
  * merges objects
  */
 
-core.escape = function(html){
+core.escapeHTML = function(html){
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -65,14 +65,6 @@ core.fromPrototype = function fromPrototype(prototype, object) {
 
 core.clear = function clear() {
 	console.log('\033[2J')
-}
-
-/**
- * log to stdout
- */
-
-core.cl = function cl(data) {
-	console.log(data)
 }
 
 /**
@@ -187,14 +179,6 @@ core.getExtProps = function getExtProps(name, obj, maxLevel, show) {
 	}
 	lop(obj, level)
 	return html
-}
-
-/**
- * returns better typeOf result
- */
-
-core.toType = function(obj) {
-  return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 }
 
 /**
